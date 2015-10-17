@@ -22,9 +22,6 @@ set foldlevel=99
 nnoremap <space> za
 vnoremap <space> zf
 
-
-
-
 " Vundle设置
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -48,7 +45,6 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-scripts/winmanager'
 Plugin 'vim-scripts/a.vim'
 Plugin 'kien/ctrlp.vim'
-"Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'moll/vim-bbye'
 Bundle 'Valloric/YouCompleteMe'
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -173,3 +169,10 @@ nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_confirm_extra_conf=0    "打开vim时不再询问是否加载ycm_extra_conf.py配置
 let g:ycm_collect_identifiers_from_tag_files = 1 "使用ctags生成的tags文件
+"开启光亮光标行
+set cursorline
+"hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=NONE guibg=darkred guifg=white
+
+"开启高亮光标列
+set cursorcolumn
+"hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
