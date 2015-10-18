@@ -176,3 +176,16 @@ set cursorline
 "开启高亮光标列
 set cursorcolumn
 "hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+" C++的编译和运行 
+map <F5> :call CompileRunGpp()<CR> 
+func! CompileRunGpp() 
+exec "w" 
+exec "!make"
+exec "! ./r_*.out" 
+endfunc
+"python的运行
+map <F6> :call CompileRunPython()<CR> 
+func! CompileRunPython() 
+exec "w" 
+exec "!ipython %"
+endfunc
